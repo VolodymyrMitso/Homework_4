@@ -1,16 +1,27 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:colorBackground">@color/colorPrimary</item>
+    <style name="AppTheme1" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/colorPrimary2</item>
     </style>
 
     <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:colorBackground">@color/colorPrimary2</item>
-
+        <item name="android:colorBackground">@color/colorPrimary3</item>
     </style>
 
-    <style name="AppTheme3" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:colorBackground">@color/colorPrimary3</item>
+    <style name="stl_littleButtonStyle">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">50dp</item>
+
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="stl_bigButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

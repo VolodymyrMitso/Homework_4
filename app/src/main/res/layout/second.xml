@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+
+        android:id="@+id/v_space_SA"
+
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        style="@style/stl_bigButtonStyle"
+
+        android:id="@+id/et_InputField_SA"
+        android:textSize="23sp"
+
+        android:layout_above="@id/v_space_SA" />
+
+    <Button
+        style="@style/stl_bigButtonStyle"
+
+        android:id="@+id/btn_OK_SA"
+        android:text="OK"
+
+        android:layout_below="@id/v_space_SA"/>
+
+</RelativeLayout>

@@ -8,9 +8,8 @@ public class Utils
 {
     private static int sTheme;
 
-    public final static int THEME_DEFAULT = 0;
-    public final static int THEME_WHITE = 1;
-    public final static int THEME_BLUE = 2;
+    public final static int THEME_1 = 1;
+    public final static int THEME_2 = 2;
 
     /**
      * Set the theme of the Activity, and restart it by creating a new Activity
@@ -20,7 +19,6 @@ public class Utils
     {
         sTheme = theme;
         activity.finish();
-
         activity.startActivity(new Intent(activity, activity.getClass()));
     }
 
@@ -30,14 +28,11 @@ public class Utils
         switch (sTheme)
         {
             default:
-            case THEME_DEFAULT:
-                activity.setTheme(R.style.AppTheme);
+            case THEME_1:
+                activity.setTheme(R.style.AppTheme1);
                 break;
-            case THEME_WHITE:
+            case THEME_2:
                 activity.setTheme(R.style.AppTheme2);
-                break;
-            case THEME_BLUE:
-                activity.setTheme(R.style.AppTheme3);
                 break;
         }
     }
