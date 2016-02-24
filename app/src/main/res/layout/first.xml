@@ -19,7 +19,7 @@
         style="@style/stl_bigStyle"
 
         android:id="@+id/btn_OK_FA"
-        android:text="@string/s_ok"
+        android:background="@drawable/button_2"
 
         android:layout_below="@id/v_space_FA"/>
 

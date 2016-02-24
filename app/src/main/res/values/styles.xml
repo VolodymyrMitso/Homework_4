@@ -25,7 +25,7 @@
         <item name="android:layout_height">@dimen/d_size_50dp</item>
 
         <item name="android:gravity">center</item>
-        <item name="android:textSize">@dimen/d_textSize_20sp</item>
+        <item name="android:textSize">@dimen/d_textSize_25sp</item>
     </style>
 
     <style name="stl_littleStyle">
@@ -37,8 +37,8 @@
     </style>
 
     <style name="stl_tinyStyle">
-        <item name="android:layout_width">@dimen/d_size_40dp</item>
-        <item name="android:layout_height">@dimen/d_size_40dp</item>
+        <item name="android:layout_width">@dimen/d_size_35dp</item>
+        <item name="android:layout_height">@dimen/d_size_25dp</item>
 
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/d_textSize_6dsp</item>

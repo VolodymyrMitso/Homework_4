@@ -1,9 +1,6 @@
 <resources>
     <string name="s_appName">Homework_4</string>
 
-    <string name="s_calculate">Calculate</string>
     <string name="s_on">ON</string>
     <string name="s_off">OFF</string>
-
-    <string name="s_ok">OK</string>
 </resources>

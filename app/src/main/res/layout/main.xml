@@ -7,7 +7,7 @@
         style="@style/stl_bigStyle"
 
         android:id="@+id/btn_Calculate_MA"
-        android:text="@string/s_calculate"
+        android:background="@drawable/button_1"
 
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
@@ -16,6 +16,7 @@
         style="@style/stl_littleStyle"
 
         android:id="@+id/btn_FirstButton_MA"
+        android:background="@color/c_black"
 
         android:layout_above="@+id/btn_Calculate_MA"
         android:layout_marginBottom="@dimen/d_size_15dp"
@@ -36,6 +37,7 @@
         style="@style/stl_littleStyle"
 
         android:id="@+id/btn_SecondButton_MA"
+        android:background="@color/c_black"
 
         android:layout_above="@id/btn_Calculate_MA"
         android:layout_marginBottom="@dimen/d_size_15dp"
@@ -65,7 +67,7 @@
         style="@style/stl_tinyStyle"
 
         android:id="@+id/btn_DarkTheme_MA"
-        android:text="@string/s_on"
+        android:background="@drawable/button_4"
 
         android:layout_alignTop="@id/v_space_MA"
         android:layout_toRightOf="@id/v_space_MA"
@@ -75,7 +77,7 @@
         style="@style/stl_tinyStyle"
 
         android:id="@+id/btn_LightTheme_MA"
-        android:text="@string/s_off"
+        android:background="@drawable/button3"
 
         android:layout_alignTop="@id/v_space_MA"
         android:layout_toLeftOf="@id/v_space_MA"

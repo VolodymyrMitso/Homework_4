@@ -23,7 +23,6 @@ public class MainSupport {
             showToast(Constants.WARNING_SECOND_EMPTY);
         } else {
             String sign = String.valueOf(MainActivity.editText_sign.getText());
-            MainActivity.string_sign = sign;
             if (sign.isEmpty()) {
                 showToast(Constants.WARNING_SIGN_EMPTY);
             } else {

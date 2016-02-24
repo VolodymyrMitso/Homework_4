@@ -65,7 +65,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    private void openFirstActivity(){
+    private void openFirstActivity() {
         Intent intent = new Intent(this, FirstActivity.class);
         startActivityForResult(intent, Constants.REQUEST_FIRST_ACTIVITY);
     }

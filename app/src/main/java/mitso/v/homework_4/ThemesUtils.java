@@ -14,6 +14,8 @@ public class ThemesUtils {
         theme_index = theme;
         activity.finish();
         activity.startActivity(new Intent(activity, activity.getClass()));
+
+        MainActivity.string_sign = String.valueOf(MainActivity.editText_sign.getText());
     }
 
     public static void onActivityCreateSetTheme(Activity activity) {

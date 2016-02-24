@@ -5,10 +5,12 @@
     <dimen name="d_size_15dp">15dp</dimen>
     <dimen name="d_size_25dp">25dp</dimen>
     <dimen name="d_size_30dp">30dp</dimen>
+    <dimen name="d_size_35dp">35dp</dimen>
     <dimen name="d_size_40dp">40dp</dimen>
     <dimen name="d_size_50dp">50dp</dimen>
     <dimen name="d_size_90dp">90dp</dimen>
 
     <dimen name="d_textSize_20sp">20sp</dimen>
+    <dimen name="d_textSize_25sp">25sp</dimen>
     <dimen name="d_textSize_6dsp">6dp</dimen>
 </resources>
