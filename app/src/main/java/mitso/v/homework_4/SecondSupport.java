@@ -40,8 +40,8 @@ public class SecondSupport {
     }
 
     private static void showToast(String warning) {
-        Toast toast = Toast.makeText(context, warning, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER,0,-500);
+        Toast toast = Toast.makeText(context, warning, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.RIGHT,0,-500);
         toast.show();
     }
 

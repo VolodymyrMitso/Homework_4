@@ -8,20 +8,48 @@
         <item name="android:colorBackground">@color/c_colorDark</item>
     </style>
 
-    <style name="stl_littleButtonStyle">
-        <item name="android:layout_width">90dp</item>
-        <item name="android:layout_height">50dp</item>
 
-        <item name="android:gravity">left|center_vertical</item>
-        <item name="android:textSize">23sp</item>
+
+    <style name="stl_layoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:paddingLeft">@dimen/d_size_30dp</item>
+        <item name="android:paddingRight">@dimen/d_size_30dp</item>
     </style>
 
-    <style name="stl_bigButtonStyle">
+
+
+    <style name="stl_bigStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">@dimen/d_size_50dp</item>
 
         <item name="android:gravity">center</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/d_textSize_20sp</item>
+    </style>
+
+    <style name="stl_littleStyle">
+        <item name="android:layout_width">@dimen/d_size_90dp</item>
+        <item name="android:layout_height">@dimen/d_size_50dp</item>
+
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textSize">@dimen/d_textSize_20sp</item>
+    </style>
+
+    <style name="stl_tinyStyle">
+        <item name="android:layout_width">@dimen/d_size_40dp</item>
+        <item name="android:layout_height">@dimen/d_size_40dp</item>
+
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/d_textSize_6dsp</item>
+    </style>
+
+    <style name="stl_space">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/d_size_30dp</item>
+
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
     </style>
 
 </resources>

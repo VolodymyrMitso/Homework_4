@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp">
+    style="@style/stl_layoutStyle">
 
     <Space
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
+        style="@style/stl_space"
 
-        android:id="@+id/v_space_FA"
-
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/v_space_FA" />
 
     <EditText
-        style="@style/stl_bigButtonStyle"
+        style="@style/stl_bigStyle"
 
         android:id="@+id/et_InputField_FA"
-        android:textSize="23sp"
 
         android:layout_above="@id/v_space_FA" />
 
     <Button
-        style="@style/stl_bigButtonStyle"
+        style="@style/stl_bigStyle"
 
         android:id="@+id/btn_OK_FA"
-        android:text="OK"
+        android:text="@string/s_ok"
 
         android:layout_below="@id/v_space_FA"/>
 

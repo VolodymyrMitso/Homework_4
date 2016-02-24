@@ -5,20 +5,19 @@ import android.content.Intent;
 
 public class ThemesUtils {
 
-    private static int sTheme;
+    private static int theme_index;
 
     public final static int THEME_LIGHT = 1;
     public final static int THEME_DARK = 2;
 
     public static void changeToTheme(Activity activity, int theme) {
-        sTheme = theme;
+        theme_index = theme;
         activity.finish();
         activity.startActivity(new Intent(activity, activity.getClass()));
     }
 
     public static void onActivityCreateSetTheme(Activity activity) {
-
-        switch (sTheme) {
+        switch (theme_index) {
             case THEME_LIGHT:
                 activity.setTheme(R.style.thm_LightTheme);
                 break;
@@ -29,9 +28,9 @@ public class ThemesUtils {
     }
 
     public static void initViews() {
-        MainActivity.firstButton.setText(MainActivity.firstNumberString);
-        MainActivity.secondButton.setText(MainActivity.secondNumberString);
-        MainActivity.signEditText.setText(MainActivity.signString);
-        MainActivity.resultView.setText(MainActivity.resultString);
+        MainActivity.button_first.setText(MainActivity.string_firstNumber);
+        MainActivity.button_second.setText(MainActivity.string_secondNumber);
+        MainActivity.editText_sign.setText(MainActivity.string_sign);
+        MainActivity.textView_result.setText(MainActivity.string_result);
     }
 }

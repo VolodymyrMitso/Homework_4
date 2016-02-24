@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 public class SecondActivity extends Activity implements View.OnClickListener {
 
-    private EditText mSecondNumber;
+    private EditText editText_secondNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +17,13 @@ public class SecondActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.second);
 
         findViewById(R.id.btn_OK_SA).setOnClickListener(this);
-        mSecondNumber = (EditText) findViewById(R.id.et_InputField_SA);
+        editText_secondNumber = (EditText) findViewById(R.id.et_InputField_SA);
     }
 
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(this, MainActivity.class);
-        if (SecondSupport.check(mSecondNumber, this)) {
+        if (SecondSupport.check(editText_secondNumber, this)) {
             intent.putExtra(Constants.BUNDLE_SECOND_NUMBER, SecondSupport.returnString());
             setResult(RESULT_OK, intent);
         } else {

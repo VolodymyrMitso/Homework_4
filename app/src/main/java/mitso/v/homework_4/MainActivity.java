@@ -3,24 +3,24 @@ package mitso.v.homework_4;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    public static Button firstButton;
-    public static Button secondButton;
-    public static String firstNumberString = "";
-    public static String secondNumberString = "";
+    public static Button button_first;
+    public static String string_firstNumber = "";
 
-    public static EditText signEditText;
-    public static TextView resultView;
-    public static String signString = "";
-    public static String resultString = "";
+    public static Button button_second;
+    public static String string_secondNumber = "";
+
+    public static EditText editText_sign;
+    public static String string_sign = "";
+
+    public static TextView textView_result;
+    public static String string_result = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +28,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ThemesUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.main);
 
-        firstButton = (Button) findViewById(R.id.btn_FirstButton_MA);
-        firstButton.setOnClickListener(this);
-        secondButton = (Button) findViewById(R.id.btn_SecondButton_MA);
-        secondButton.setOnClickListener(this);
+        button_first = (Button) findViewById(R.id.btn_FirstButton_MA);
+        button_first.setOnClickListener(this);
+        button_second = (Button) findViewById(R.id.btn_SecondButton_MA);
+        button_second.setOnClickListener(this);
 
         findViewById(R.id.btn_Calculate_MA).setOnClickListener(this);
 
-        resultView = (TextView) findViewById(R.id.tv_Result_MA);
-        signEditText = (EditText) findViewById(R.id.et_Sign_MA);
+        textView_result = (TextView) findViewById(R.id.tv_Result_MA);
+        editText_sign = (EditText) findViewById(R.id.et_Sign_MA);
 
         findViewById(R.id.btn_LightTheme_MA).setOnClickListener(this);
         findViewById(R.id.btn_DarkTheme_MA).setOnClickListener(this);
@@ -54,7 +54,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 openSecondActivity();
                 break;
             case R.id.btn_Calculate_MA:
-                MainSupport.calculate(firstNumberString, secondNumberString, this);
+                MainSupport.calculate(string_firstNumber, string_secondNumber, this);
                 break;
             case R.id.btn_LightTheme_MA:
                 ThemesUtils.changeToTheme(this, ThemesUtils.THEME_LIGHT);
@@ -81,18 +81,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case Constants.REQUEST_FIRST_ACTIVITY:
-                    firstNumberString = data.getStringExtra(Constants.BUNDLE_FIRST_NUMBER);
-                    firstButton.setText(firstNumberString);
-                    Toast toast1 = Toast.makeText(this, firstNumberString, Toast.LENGTH_SHORT);
-                    toast1.setGravity(Gravity.CENTER,0,-500);
-                    toast1.show();
+                    string_firstNumber = data.getStringExtra(Constants.BUNDLE_FIRST_NUMBER);
+                    button_first.setText(string_firstNumber);
                     break;
                 case Constants.REQUEST_SECOND_ACTIVITY:
-                    secondNumberString = data.getStringExtra(Constants.BUNDLE_SECOND_NUMBER);
-                    secondButton.setText(secondNumberString);
-                    Toast toast2 = Toast.makeText(this, secondNumberString, Toast.LENGTH_SHORT);
-                    toast2.setGravity(Gravity.CENTER,0,-500);
-                    toast2.show();
+                    string_secondNumber = data.getStringExtra(Constants.BUNDLE_SECOND_NUMBER);
+                    button_second.setText(string_secondNumber);
                     break;
             }
         }

@@ -1,62 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp">
+    style="@style/stl_layoutStyle">
 
     <Button
-        style="@style/stl_bigButtonStyle"
+        style="@style/stl_bigStyle"
 
         android:id="@+id/btn_Calculate_MA"
-        android:text="Calculate"
+        android:text="@string/s_calculate"
 
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
-        style="@style/stl_littleButtonStyle"
+        style="@style/stl_littleStyle"
 
         android:id="@+id/btn_FirstButton_MA"
 
         android:layout_above="@+id/btn_Calculate_MA"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/d_size_15dp"
         android:layout_alignLeft="@id/btn_Calculate_MA"
         android:layout_alignStart="@id/btn_Calculate_MA" />
 
     <EditText
-        style="@style/stl_littleButtonStyle"
+        style="@style/stl_littleStyle"
 
         android:id="@+id/et_Sign_MA"
         android:gravity="center"
 
         android:layout_above="@id/btn_Calculate_MA"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/d_size_15dp"
         android:layout_centerHorizontal="true" />
 
     <Button
-        style="@style/stl_littleButtonStyle"
+        style="@style/stl_littleStyle"
 
         android:id="@+id/btn_SecondButton_MA"
 
         android:layout_above="@id/btn_Calculate_MA"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/d_size_15dp"
         android:layout_alignRight="@id/btn_Calculate_MA"
         android:layout_alignEnd="@id/btn_Calculate_MA" />
     
     <TextView
-        style="@style/stl_bigButtonStyle"
+        style="@style/stl_bigStyle"
 
         android:id="@+id/tv_Result_MA"
 
         android:layout_below="@+id/btn_Calculate_MA"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/d_size_15dp"
         android:layout_centerHorizontal="true" />
 
     <Space
-        android:layout_width="5dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/d_size_1dp"
+        android:layout_height="@dimen/d_size_40dp"
 
         android:id="@+id/v_space_MA"
 
@@ -65,26 +62,20 @@
         android:layout_marginBottom="50dp" />
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        style="@style/stl_tinyStyle"
 
         android:id="@+id/btn_DarkTheme_MA"
-        android:text="ON"
-        android:textSize="8sp"
-        android:gravity="center"
+        android:text="@string/s_on"
 
         android:layout_alignTop="@id/v_space_MA"
         android:layout_toRightOf="@id/v_space_MA"
         android:layout_toEndOf="@id/v_space_MA" />
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        style="@style/stl_tinyStyle"
 
         android:id="@+id/btn_LightTheme_MA"
-        android:text="OFF"
-        android:textSize="8sp"
-        android:gravity="center"
+        android:text="@string/s_off"
 
         android:layout_alignTop="@id/v_space_MA"
         android:layout_toLeftOf="@id/v_space_MA"

@@ -22,8 +22,8 @@ public class MainSupport {
         } else if (s2.isEmpty()) {
             showToast(Constants.WARNING_SECOND_EMPTY);
         } else {
-            String sign = String.valueOf(MainActivity.signEditText.getText());
-            MainActivity.signString = sign;///////////////////////////////////////////////////////////////////////
+            String sign = String.valueOf(MainActivity.editText_sign.getText());
+            MainActivity.string_sign = sign;
             if (sign.isEmpty()) {
                 showToast(Constants.WARNING_SIGN_EMPTY);
             } else {
@@ -33,25 +33,28 @@ public class MainSupport {
                     double d1 = Double.parseDouble(s1);
                     double d2 = Double.parseDouble(s2);
                     double result = 0.0;
-                    if (sign.equals("+"))
+                    if (sign.equals("+")) {
                         result = d1 + d2;
-                    else if (sign.equals("-"))
+                        result = roundDouble(result,1);
+                    } else if (sign.equals("-")) {
                         result = d1 - d2;
-                    else if (sign.equals("*"))
+                        result = roundDouble(result, 1);
+                    } else if (sign.equals("*")) {
                         result = d1 * d2;
-                    else if (sign.equals("/")) {
+                        result = roundDouble(result, 2);
+                    } else if (sign.equals("/")) {
                         result = d1 / d2;
-                        result = new BigDecimal(result).setScale(2, RoundingMode.HALF_UP).doubleValue();
+                        result = roundDouble(result, 2);
                     }
-                    MainActivity.resultString = String.valueOf(result); ////////////////////////////////////////////////////////
-                    MainActivity.resultView.setText(String.valueOf(result));
+                    MainActivity.string_result = String.valueOf(result);
+                    MainActivity.textView_result.setText(String.valueOf(result));
                 }
             }
         }
     }
 
     private static void showToast(String warning) {
-        Toast toast = Toast.makeText(context, warning, Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(context, warning, Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER,0,-500);
         toast.show();
     }
@@ -62,6 +65,9 @@ public class MainSupport {
                 s.matches("-") ||
                 s.matches("\\*") ||
                 s.matches("/");
+    }
 
+    private static double roundDouble(double d, int scale) {
+        return new BigDecimal(d).setScale(scale, RoundingMode.HALF_UP).doubleValue();
     }
 }
