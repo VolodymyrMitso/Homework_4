@@ -3,7 +3,6 @@ package mitso.v.homework_4;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 
@@ -22,11 +21,11 @@ public class SecondActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(this, MainActivity.class);
-        if (TextUtils.isEmpty(mSecondNumber.getText().toString())) {
-            setResult(RESULT_CANCELED);
-        } else {
-            intent.putExtra(Constants.BUNDLE_SECOND_NUMBER, mSecondNumber.getText().toString());
+        if (SecondSupport.check(mSecondNumber, this)) {
+            intent.putExtra(Constants.BUNDLE_SECOND_NUMBER, SecondSupport.returnString());
             setResult(RESULT_OK, intent);
+        } else {
+            setResult(RESULT_CANCELED);
         }
         finish();
     }
