@@ -2,6 +2,7 @@ package mitso.v.homework_4;
 
 public final class Constants {
 
+    public static final int REQUEST_MAIN_ACTIVITY = 777;
     public static final int REQUEST_FIRST_ACTIVITY = 888;
     public static final int REQUEST_SECOND_ACTIVITY = 999;
 

@@ -13,7 +13,9 @@ public class FirstActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemesUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.first);
+
         findViewById(R.id.btn_OK_FA).setOnClickListener(this);
         mFirstNumber = (EditText) findViewById(R.id.et_InputField_FA);
     }

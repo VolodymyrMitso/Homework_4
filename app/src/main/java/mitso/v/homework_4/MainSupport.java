@@ -23,6 +23,7 @@ public class MainSupport {
             showToast(Constants.WARNING_SECOND_EMPTY);
         } else {
             String sign = String.valueOf(MainActivity.signEditText.getText());
+            MainActivity.signString = sign;///////////////////////////////////////////////////////////////////////
             if (sign.isEmpty()) {
                 showToast(Constants.WARNING_SIGN_EMPTY);
             } else {
@@ -42,6 +43,7 @@ public class MainSupport {
                         result = d1 / d2;
                         result = new BigDecimal(result).setScale(2, RoundingMode.HALF_UP).doubleValue();
                     }
+                    MainActivity.resultString = String.valueOf(result); ////////////////////////////////////////////////////////
                     MainActivity.resultView.setText(String.valueOf(result));
                 }
             }

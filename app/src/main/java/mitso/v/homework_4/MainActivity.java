@@ -6,34 +6,27 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements CompoundButton.OnCheckedChangeListener, View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
 
-    private static String firstNumberString = "";
-    private static String secondNumberString = "";
-
-    private static Button firstButton;
-    private static Button secondButton;
+    public static Button firstButton;
+    public static Button secondButton;
+    public static String firstNumberString = "";
+    public static String secondNumberString = "";
 
     public static EditText signEditText;
     public static TextView resultView;
-
-    Switch switchButton; // !!!
+    public static String signString = "";
+    public static String resultString = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Utils.onActivityCreateSetTheme(this);
+        ThemesUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.main);
-
-        switchButton = (Switch) findViewById(R.id.sw_switchTheme_MA); // !!!
-        if (switchButton != null)
-            switchButton.setOnCheckedChangeListener(this);
 
         firstButton = (Button) findViewById(R.id.btn_FirstButton_MA);
         firstButton.setOnClickListener(this);
@@ -44,6 +37,11 @@ public class MainActivity extends Activity implements CompoundButton.OnCheckedCh
 
         resultView = (TextView) findViewById(R.id.tv_Result_MA);
         signEditText = (EditText) findViewById(R.id.et_Sign_MA);
+
+        findViewById(R.id.btn_LightTheme_MA).setOnClickListener(this);
+        findViewById(R.id.btn_DarkTheme_MA).setOnClickListener(this);
+
+        ThemesUtils.initViews();
     }
 
     @Override
@@ -57,6 +55,12 @@ public class MainActivity extends Activity implements CompoundButton.OnCheckedCh
                 break;
             case R.id.btn_Calculate_MA:
                 MainSupport.calculate(firstNumberString, secondNumberString, this);
+                break;
+            case R.id.btn_LightTheme_MA:
+                ThemesUtils.changeToTheme(this, ThemesUtils.THEME_LIGHT);
+                break;
+            case R.id.btn_DarkTheme_MA:
+                ThemesUtils.changeToTheme(this, ThemesUtils.THEME_DARK);
                 break;
         }
     }
@@ -91,17 +95,6 @@ public class MainActivity extends Activity implements CompoundButton.OnCheckedCh
                     toast2.show();
                     break;
             }
-        }
-    }
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if (isChecked) {
-            Utils.changeToTheme(this, Utils.THEME_2);
-        } else {
-            Utils.changeToTheme(this, Utils.THEME_1);
         }
     }
 }

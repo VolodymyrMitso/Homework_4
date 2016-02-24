@@ -1,11 +1,11 @@
 <resources>
 
-    <style name="AppTheme1" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:colorBackground">@color/colorPrimary2</item>
+    <style name="thm_LightTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/c_colorLight</item>
     </style>
 
-    <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:colorBackground">@color/colorPrimary3</item>
+    <style name="thm_DarkTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/c_colorDark</item>
     </style>
 
     <style name="stl_littleButtonStyle">

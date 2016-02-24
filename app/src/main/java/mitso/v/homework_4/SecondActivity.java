@@ -13,7 +13,9 @@ public class SecondActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemesUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.second);
+
         findViewById(R.id.btn_OK_SA).setOnClickListener(this);
         mSecondNumber = (EditText) findViewById(R.id.et_InputField_SA);
     }
