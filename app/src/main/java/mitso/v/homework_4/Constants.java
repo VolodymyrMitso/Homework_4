@@ -49,4 +49,10 @@ public final class Constants {
             "- use one of these symbols:\n" +
             "[+] or [-] or [*] or [/]\n" +
             "- enter sign between two numbers";
+
+
+
+    public static final String WARNING_ZERO_DIVISION_ERROR = "zero division error:\n".toUpperCase() +
+            "- press right button to correct second number\n" +
+            "- correct sign between two numbers";
 }

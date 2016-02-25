@@ -42,8 +42,12 @@ public class MainSupport {
                         result = d1 * d2;
                         result = roundDouble(result, 2);
                     } else if (sign.equals("/")) {
-                        result = d1 / d2;
-                        result = roundDouble(result, 2);
+                        if (d2 == 0) {
+                            showToast(Constants.WARNING_ZERO_DIVISION_ERROR);
+                        } else {
+                            result = d1 / d2;
+                            result = roundDouble(result, 2);
+                        }
                     }
                     MainActivity.string_result = String.valueOf(result);
                     MainActivity.textView_result.setText(String.valueOf(result));
